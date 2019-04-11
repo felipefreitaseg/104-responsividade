@@ -5,6 +5,8 @@ body{
                          'section section aside aside'
                          'footer footer footer footer';
     grid-template-rows: 10vh 60vh 30vh;
+    font-family: 'Dokdo', cursive;
+    grid-template-columns: 25vw 25vw 25vw 25vw;
 }
 nav{
     grid-area: navbar;
@@ -17,6 +19,9 @@ nav a{
     color: white;
     text-decoration: none;
     font-size: 16px;
+}
+nav a:hover{
+
 }
 #menuHamburguer{
     display: none;
@@ -34,6 +39,18 @@ nav a{
 section{
     grid-area: section;
     background-color: darkred;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+section img{
+    border-radius: 100%;
+    z-index: 1000;
+}
+section h1{
+    color: white;
+    font-size: 30px;
 }
 aside{
     grid-area: aside;
@@ -41,7 +58,24 @@ aside{
 }
 footer{
     grid-area: footer;
-    background-color: slateblue; 
+    background-color: slateblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 10px;
+}
+footer div:first-child{
+    width: 40vw;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+}
+footer div:nth-child(2){
+    width: 100vw;
+    display: flex;
+    justify-content: space-around
 }
 @media (max-width:768px){
     nav a{
@@ -60,7 +94,7 @@ footer{
                              'section section section section'
                              'aside aside aside aside'
                              'footer footer footer footer';
-        grid-template-rows: 10vh 35vh 35vh 20vh;
+        grid-template-rows: 10vh auto auto 20vh;
     }
     section{
         grid-area: section;
@@ -73,6 +107,7 @@ footer{
     footer{
         grid-area: footer;
         background-color: gold; 
+        
     }
 }
 @media (max-width:468px){
@@ -81,7 +116,7 @@ footer{
                              'section section section section'
                              'aside aside aside aside'
                              'footer footer footer footer';
-        grid-template-rows: 10vh 38vh 38vh 14vh;
+        grid-template-rows: 10vh auto auto 14vh;
     }
     nav{
         background-color: aqua;
