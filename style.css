@@ -1,0 +1,135 @@
+body{
+    margin: 0;
+    display: grid;
+    grid-template-areas: 'navbar navbar navbar navbar'
+                         'section section aside aside'
+                         'footer footer footer footer';
+    grid-template-rows: 10vh 60vh 30vh;
+}
+nav{
+    grid-area: navbar;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+#menuHamburguer{
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 40px;
+    width: 30px;
+}
+.trace{
+    width: 100%;
+    height: 5px;
+    background-color: black;
+    border-radius: 40px;
+}
+section{
+    grid-area: section;
+    background-color: darkred;
+}
+aside{
+    grid-area: aside;
+    background-color: palegreen;
+}
+footer{
+    grid-area: footer;
+    background-color: slateblue; 
+}
+@media (max-width:768px){
+    nav a{
+        display: none;
+    }
+    nav{
+        background-color: chartreuse;
+        justify-content: flex-end;
+    }
+    #menuHamburguer{
+        display: flex;
+        margin-right: 20px;
+    }
+    body{
+        grid-template-areas: 'navbar navbar navbar navbar'
+                             'section section section section'
+                             'aside aside aside aside'
+                             'footer footer footer footer';
+        grid-template-rows: 10vh 35vh 35vh 20vh;
+    }
+    section{
+        grid-area: section;
+        background-color: tomato;
+    }
+    aside{
+        grid-area: aside;
+        background-color: magenta;
+    }
+    footer{
+        grid-area: footer;
+        background-color: gold; 
+    }
+}
+@media (max-width:468px){
+    body{
+        grid-template-areas: 'navbar navbar navbar navbar'
+                             'section section section section'
+                             'aside aside aside aside'
+                             'footer footer footer footer';
+        grid-template-rows: 10vh 38vh 38vh 14vh;
+    }
+    nav{
+        background-color: aqua;
+    }
+    section{
+        grid-area: section;
+        background-color: teal;
+    }
+    aside{
+        grid-area: aside;
+        background-color: hotpink;
+    }
+    footer{
+        grid-area: footer;
+        background-color: indigo; 
+    }
+}
+@media (max-width:425px){
+    nav{
+        background-color: darkorange;
+    }
+    section{
+        grid-area: section;
+        background-color: sienna;
+    }
+    aside{
+        grid-area: aside;
+        background-color: forestgreen;
+    }
+    footer{
+        grid-area: footer;
+        background-color: coral; 
+    }
+}
+@media (max-width:375px){
+    nav{
+        background-color: deeppink;
+    }
+    section{
+        grid-area: section;
+        background-color: khaki;
+    }
+    aside{
+        grid-area: aside;
+        background-color: indigo;
+    }
+    footer{
+        grid-area: footer;
+        background-color: darkviolet; 
+    }
+}
